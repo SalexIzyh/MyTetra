@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mytetradoc>
+<root>
+ <format version="1" subversion="2"/>
+ <content>
+  <node crypt="" id="1300000000aaaaaaaaa1" name="Разное">
+   <recordtable>
+    <record id="1300000000aaaaaaaaa3" name="Welcome to MyTetra!" author="" url="" tags="MyTetra, Qt" ctime="20081210124656" dir="1300000000aaaaaaaaa2" file="text.html"/>
+   </recordtable>
+   <node crypt="" id="1481274816huvtl7djjs" name="Английский">
+    <recordtable>
+     <record id="14812748508jjlwjzbjq" name="Сколько слов необходимо знать?" author="" url="" tags="" ctime="20161209161410" dir="1481274850m1kf5gfykx" file="text.html"/>
+    </recordtable>
+   </node>
+   <node crypt="" id="1481280714kfh431sjf9" name="Здоровье">
+    <recordtable>
+     <record id="1481280742z5sw5p8vuj" name="Как без таблеток избавиться от таблеток" author="" url="" tags="" ctime="20161209175222" dir="14812807428zz5a0tqxs" file="text.html"/>
+    </recordtable>
+   </node>
+  </node>
+  <node crypt="1" icon="" id="1481516066k17so1ssrk" name="UkM1U0lNUAOGF/cOUt9c6REpDrUo9/NjiJC4HcQ4FrtV0SDRpukUSU6ltvWlw3SD5ZXA743x2TI=">
+   <node crypt="1" icon="" id="1481516116khbcxzuyhk" name="UkM1U0lNUAPryybOmh9BdcuqXNUr1QLzzzvrJx2YUyLsaNC2YHpbkgcsdxbLOtjI"/>
+   <node crypt="1" icon="" id="1481516149hp3dbuv3gs" name="UkM1U0lNUAP68+kZRMG8J8/09f7fmUtfuFP28uBIk3oZ1+HLTjyOnvB0nSdvayG+"/>
+   <node crypt="1" icon="" id="1481516173og8131cmgr" name="UkM1U0lNUAPImnH7XKgoaPsFKwwmfcxLoR40HtZEPO2593XTnK64aJprOotewva7UczBN1F9vLYFjdKgEpfP5g=="/>
+   <node crypt="1" icon="" id="14815335948130c8dzy7" name="UkM1U0lNUAObmVuPc3jJayoGuLoPM3E7W9gmslrUAaroYgi3wQa5uiCEMGSy/qK3">
+    <recordtable>
+     <record id="1481533632w3raumeorn" name="UkM1U0lNUAOrZTW8dsgBtFbfrpsYQzpF8o4W2uQ0KB0uCrPqFH/FIeyYrsJ9cEITqYqHGQ4PhxA=" author="" url="" tags="" ctime="20161212160712" dir="1481533632urbxxjsdsz" file="text.html" crypt="1"/>
+    </recordtable>
+   </node>
+  </node>
+  <node crypt="" id="1481516249fe2a9ow6db" name="Программирование">
+   <node crypt="" id="1481516268hh1g9nk9ae" name="1С"/>
+   <node crypt="" id="1481516285nfqgkyaj99" name="DELPHI"/>
+  </node>
+ </content>
+</root>
