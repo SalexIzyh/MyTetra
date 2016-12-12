@@ -34,7 +34,11 @@
    <node crypt="" id="1481549281lnt7mgxnef" name="SQL"/>
   </node>
   <node crypt="" id="1481555338irlskjxfdm" name="Администрирование">
-   <node crypt="" id="1481555352xz1akpc9ts" name="FTP"/>
+   <node crypt="" id="1481555352xz1akpc9ts" name="FTP">
+    <recordtable>
+     <record id="1481555553upjvm6y4cu" name="Как мы настраивали FTP сервер за MikroTik" author="" url="http://lantorg.com/article/kak-my-nastraivali-ftp-server-za-mikrotik" tags="ftp, mikrtik , настройка" ctime="20161212221233" dir="1481555553h7jmy9y88y" file="text.html"/>
+    </recordtable>
+   </node>
   </node>
  </content>
 </root>
