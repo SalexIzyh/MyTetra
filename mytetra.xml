@@ -36,7 +36,12 @@
   <node crypt="" id="1481555338irlskjxfdm" name="Администрирование">
    <node crypt="" id="1481555352xz1akpc9ts" name="FTP">
     <recordtable>
-     <record id="1481555553upjvm6y4cu" name="Как мы настраивали FTP сервер за MikroTik" author="" url="http://lantorg.com/article/kak-my-nastraivali-ftp-server-za-mikrotik" tags="ftp, mikrtik , настройка" ctime="20161212221233" dir="1481555553h7jmy9y88y" file="text.html"/>
+     <record id="1481555553upjvm6y4cu" name="Как мы настраивали FTP сервер за MikroTik" author="" url="http://lantorg.com/article/kak-my-nastraivali-ftp-server-za-mikrotik" tags="ftp, mikrtik , настройка" ctime="20161212221233" dir="1481555553h7jmy9y88y" file="text.html">
+      <files>
+       <file id="14815559394f33g2pxn4" fileName="filezilla.html" type="file"/>
+      </files>
+     </record>
+     <record id="1481555870jquiydjka9" name="Настройка FTP-сервера filezilla " author="" url="http://ab57.ru/filezilla.html" tags="filezilla Настройка FTP" ctime="20161212221750" dir="1481555870rmobahbdjp" file="text.html"/>
     </recordtable>
    </node>
   </node>
