@@ -33,5 +33,8 @@
    <node crypt="" id="1481516285nfqgkyaj99" name="DELPHI"/>
    <node crypt="" id="1481549281lnt7mgxnef" name="SQL"/>
   </node>
+  <node crypt="" id="1481555338irlskjxfdm" name="Администрирование">
+   <node crypt="" id="1481555352xz1akpc9ts" name="FTP"/>
+  </node>
  </content>
 </root>
