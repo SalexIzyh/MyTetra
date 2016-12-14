@@ -29,7 +29,12 @@
    </node>
   </node>
   <node crypt="" id="1481516249fe2a9ow6db" name="Программирование">
-   <node crypt="" id="1481516268hh1g9nk9ae" name="1С"/>
+   <node crypt="" id="1481516268hh1g9nk9ae" name="1С">
+    <recordtable>
+     <record id="1481707069r3ccbq4fo0" name="Удаление строк Таблицы Значений" author="" url="" tags="1С, Таблица" ctime="20161214161749" dir="14817070691b235fmpee" file="text.html"/>
+     <record id="1481707277g8o3whbcl7" name="Удаление строк из табличной части документа" author="" url="" tags="1с, табличная часть, удаление" ctime="20161214162117" dir="1481707277gmcy1wy212" file="text.html"/>
+    </recordtable>
+   </node>
    <node crypt="" id="1481516285nfqgkyaj99" name="DELPHI"/>
    <node crypt="" id="1481549281lnt7mgxnef" name="SQL"/>
   </node>
