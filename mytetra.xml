@@ -49,6 +49,15 @@
      <record id="1481555870jquiydjka9" name="Настройка FTP-сервера filezilla " author="" url="http://ab57.ru/filezilla.html" tags="filezilla Настройка FTP" ctime="20161212221750" dir="1481555870rmobahbdjp" file="text.html"/>
     </recordtable>
    </node>
+   <node crypt="" id="1484553440uwpqt1lonz" name="MyTetra">
+    <recordtable>
+     <record id="1484553519czd6mgltnp" name="Настройка gitHub" author="" url="http://webhamster.ru/site/page/index/articles/comp/171" tags="Настройка, gitHub" ctime="20170116145839" dir="14845535190g42ue2fn4" file="text.html">
+      <files>
+       <file id="1484553562o55zdc6lte" fileName="171" type="file"/>
+      </files>
+     </record>
+    </recordtable>
+   </node>
   </node>
  </content>
 </root>

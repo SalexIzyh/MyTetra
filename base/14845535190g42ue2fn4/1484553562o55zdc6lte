@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="pragma" content="no-cache" />
+<meta http-equiv="cache-control" content="no-cache" />
+
+<meta name='yandex-verification' content='791ca0c490de4ea4' />
+
+<meta name="Keywords" content="webhamster, hamster, хомяк, хомячок, Sergey, Stepanov, Сергей, Степанов, Xintrea, Linux, C, C++, Qt, PHP, JavaScript, Flash, компьютер, компьютеры, интернет, сайт, CodeIgniter, MyTetra, PHPSetuper, SQLite3, PDO, driver, драйвер"/>
+<meta name="Description" content="Webhamster.ru - любопытный хомячок. Собираем информацию по крупицам. Тёплый, мягкий и пушистый IT проект."/>
+
+<link rel="stylesheet" type="text/css" href="/css/tinymce_site.css"/>
+<link rel="stylesheet" type="text/css" href="/css/site.css"/>
+
+<title>Установка GIT и настройка GitHub: полное руководство (Windows, Linux) (  : Система контроля версий GIT ) </title>
+
+<!-- Google anl -->
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-18583535-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+</head>
+
+<body style="margin: 0px;">
+
+<div align="center" style="margin: 0px; padding: 0px; width: 100%;">
+<div align="left" style="margin: 0px; padding: 0px; width: 980px;">
+
+<table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-left: 0px;">
+
+ <tr style="margin-left: 0px;"><td colspan="3" style="margin-left: 0px;">   
+
+  <!-- Заголовок сайта -->
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-left: 0px;">
+   <tr style="margin-left: 0px;">
+    <td style="margin-left: 0px;"><a href="http://webhamster.ru/"><img src="/db/data/design/header_left.png" border="0"/></a></td>
+    <td width="100%" bgcolor="#6480C2"></td>  
+    <td width="303" height="110" align="right" valign="bottom" style="background-image: url('/db/data/design/header_right.png'); background-position: top left; background-repeat: no-repeat;"><img src="/db/data/design/header_right_line.png" border="0"/><br/>
+
+     <table width="100%" border="0" cellspacing="5" cellpadding="0"><tr><td align="right" valign="bottom">
+      <div class="header_font_slogan">Собираем<br/>информацию<br/>по крупицам</div>
+     </td></tr></table>
+
+    </td> 
+   </tr>
+  </table>  
+
+ </td></tr>
+ 
+ <tr style="margin-left: 0px;">
+ 
+  <!-- Меню -->   
+  <td width="128" bgcolor="#6480C2" valign="top" style="background-image: url('/db/data/design/header_left_nis.png'); background-position: top left; background-repeat: no-repeat; margin-left: 0px;">
+
+   <div style="margin-left: 12px; margin-right: 12px; margin-top: 20px; margin-bottom: 20px;">
+    <div><nobr><span class="menu_font_header">Для всех:</span></nobr></div><div><nobr><a href="http://webhamster.ru/site/page/index/main" class="menu_font">Главная</a></nobr></div><div><nobr><a href="http://webhamster.ru/site/page/index/articles/projectcode" class="menu_font">Проекты / Код</a></nobr></div><div><nobr><span class="menu_font_nolink">Статьи</span></nobr></div><div class="menu_block_div_subitem"><nobr><a href="http://webhamster.ru/site/page/index/articles/comp" class="menu_font">Компьютерное</a></nobr></div><div class="menu_block_div_subitem"><nobr><a href="http://webhamster.ru/site/page/index/articles/hmake" class="menu_font">Самоделки</a></nobr></div><div class="menu_block_div_subitem"><nobr><a href="http://webhamster.ru/site/page/index/articles/misc" class="menu_font">Разное</a></nobr></div><div><nobr><a href="http://webhamster.ru/punbb" class="menu_font">Форум</a></nobr></div><div><nobr><a href="http://webhamster.ru/site/page/index/wasistdas" class="menu_font">Это что такое?</a></nobr></div><div><nobr>&nbsp;</nobr></div><div><nobr><span class="menu_font_header">Для себя:</span></nobr></div><div><nobr><a href="http://webhamster.ru/site/page/index/draw" class="menu_font">Рисунки</a></nobr></div><div><nobr><a href="http://webhamster.ru/site/page/index/demodesign" class="menu_font">Demo Design</a></nobr></div><div><nobr><a href="http://webhamster.ru/site/page/index/animation" class="menu_font">Анимация</a></nobr></div><div><nobr><a href="http://webhamster.ru/site/page/index/game" class="menu_font">Игроделанье</a></nobr></div><div><nobr><a href="http://webhamster.ru/site/page/index/guestbook" class="menu_font">Гостевая книга</a></nobr></div><div><nobr>&nbsp;</nobr></div><div><nobr><a href="http://webhamster.ru/site/page/index/search" class="menu_font">Поиск по сайту</a></nobr></div>  
+   </div>
+
+   <div style="margin-left: 12px; margin-right: 12px; margin-top: 50px; margin-bottom: 20px;">
+
+    
+   </div>
+
+  </td>  
+ 
+  <!-- Основной текст -->
+  <td  bgcolor="#FAFAFA" valign="top" style="background-image: url('/db/data/design/header_left_ugol.png'); background-position: top left; background-repeat: no-repeat;">
+
+   <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px;">
+
+    <div class="text_font_big_head" style="text-align: right">
+</div>
+<div><br/></div>
+  
+
+    <div class="text_font_basis">
+
+     <!-- <div class="tinymce"> -->
+     <div>
+      <!-- Текст статьи -->
+<div>
+
+ <div class="text_font_big_head">Система контроля версий GIT</div><br/><table border="0" width="100%" cellspacing="0">
+ <tr>
+  <td valign="middle" width="100%" bgcolor="#8fa3d3">
+   <font class="block_font_header_left">
+    <div class="block_div_header">
+     Установка GIT и настройка GitHub: полное руководство (Windows, Linux)    </div>
+   </font> 
+  </td>
+
+  
+  <td valign="middle" align="right" bgcolor="#8fa3d3">
+   <font class="block_font_header_right">
+    <div class="block_div_header">
+     08-07-2011<br/>13:35:28    </div>
+   </font> 
+  </td>
+ </tr>
+ <tr>
+  <td valign="top" colspan="3" bgcolor="#E2E2FF">
+   <font class="block_font_text">
+    <div class="block_div_text">
+     <div class="tinymce">
+      <p><img style="float: left; margin-left: 5px; margin-right: 5px; margin-top: 3px; margin-bottom: 3px;" src="http://webhamster.ru/db/data/articles/171/git_logo_01.png" alt="" width="146" height="150" /><em>Здесь описывается практическая часть вопроса использования Git - его установка и регистрация на сервере GitHub.com.&nbsp;</em></p>
+<p>&nbsp;</p>
+<p><a href="http://GitHub.com">GitHub.com</a> - это сервис, предлагающий хранение вашего кода и данных с использованием системы контроля версий <strong>Git</strong>. GitHub предоставляет бесплатный тарифный план для хранения 300Мб данных в открытом виде. Это значит, что любой пользователь интернета может скачать себе ваши данные. На GitHub можно разместить и закрытые для других репозитарии, заплатив 7$ в месяц. &nbsp;На бесплатном аккаунте GitHub, по-умолчанию, никто не сможет изменить ваши данные (могут только читать). Но вы можете настоить, кто из пользователей системы GitHub, имеет право на запись.</p>
+<p>&nbsp;</p>
+<p>В статье подробно рассказывается, как делать настройку Git в ОС Windows и в ОС Linux.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="text_font_big_head">Установка Git под Linux</p>
+<p>&nbsp;</p>
+<p>Пользователям Linux, думаю, нет смысла объяснять, как устанавливать Git - в каждой системе это делается по-разному. В системе Debian (которая стоит у меня), для установки Git, можно использовать команду:</p>
+<p>&nbsp;</p>
+<p class="text_font_block_code">apt-get install git</p>
+<p>&nbsp;</p>
+&nbsp;
+<p class="text_font_big_head">Установка Git под Windows</p>
+<p>&nbsp;</p>
+<p>Идем на официальную страницу Git <a href="http://git-scm.com">http://git-scm.com</a>, кликаем на <strong>Download for Windows</strong>. В открывшемся окне кликаем на <strong>Full installer for official Git</strong>. Запускаем полученный exe-шник.</p>
+<p>&nbsp;</p>
+<p>В процессе инсталляции &nbsp;будет задан такой вопрос:</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="http://webhamster.ru/db/data/articles/171/scr_207.png" alt="" /></p>
+<p>&nbsp;</p>
+<p>Я рекомендую выбрать "Run Git from the Windows Command Prompt". Все остальные опции можно оставлять по-умолчанию. После установки Git нужно перегрузиться или завершить сеанс пользователя и снова войти, чтобы применились изменения в системной переменной PATH.</p>
+<p>&nbsp;</p>
+<p>Далее нужно проверить, доступен ли Git для работы. В любом каталоге даем команду:</p>
+<p>&nbsp;</p>
+<p class="text_font_block_code">git --version</p>
+<p>&nbsp;</p>
+<p>Если получаем информацию о версии, то Git установлен и работает. Если получаем информацию что программа git не найдена, разбираемся что сделали не так.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="text_font_big_head">Настройка SSH-ключей</p>
+<p>&nbsp;</p>
+<p>Перед тем, как регистрироваться на GitHub, следует вначале сгенерировать SSH-ключ шифрования. Этот ключ необходим, чтобы быстро устанавливать соединение с GitHub, не вводя пароля. Без такого ключа GitHub просто не будет работать.</p>
+<p>&nbsp;</p>
+<p style="padding-left: 30px;"><strong>Внимание!</strong></p>
+<p style="padding-left: 30px;">&nbsp;</p>
+<p style="padding-left: 30px;">В момент генерации ключа будет запрошен пароль. Это пароль доступа к закрытому ключу, который хранится только на вашей машине и нигде больше. Этот пароль задается для максимальной секьюрности, хотя можно обойтись и без него. Нужно знать, что задав пароль к закрытому ключу, нужно будет при <span style="text-decoration: underline;">каждом</span> соединении с сервером GitHub вводить данный пароль. Таким образом, при задании пароля, всё удобство пользования ключами шифрования пропадает.</p>
+<p style="padding-left: 30px;">&nbsp;</p>
+<p style="padding-left: 30px;"><strong>Пользователям MyTetra:</strong> интерфейс работы с командной строкой, который используется для вызова git при синхронизации, не может работать на ввод символов. Поэтому, если вы зададите пароль, синхронизация работать не будет.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="text_font_head">Настройка SSH-ключей в Linux</p>
+<p>&nbsp;</p>
+<p>В операционной системе Linux вначале нужно заглянуть в каталог <span class="text_font_inline_code">~/.ssh</span>. Если там есть файлы&nbsp;<span class="text_font_inline_code">id_rsa</span> и <span class="text_font_inline_code">id_rsa.pub</span>&nbsp;то это и есть SSH-ключи. Если такого каталога или таких файлов нет, то ключи нужно сгенерировать. Даем команду:</p>
+<p>&nbsp;</p>
+<p class="text_font_block_code">ssh-keygen -t rsa -C 'myemail@mail.ru'</p>
+<p>&nbsp;</p>
+<p>Вместо&nbsp;<span class="text_font_inline_code">myemail@mail.ru</span> нужно указать свой email. В процессе генерации ключа у вас спросят куда положить файлы, в ответ просто нажимаем Enter. При запросе пароля просто нажимаем Enter. После генерации, в каталоге <span class="text_font_inline_code">~/.ssh</span> должны появиться файлы <span class="text_font_inline_code">id_rsa</span> и <span class="text_font_inline_code">id_rsa.pub</span>, они нам пригодятся в дальнейшем.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="text_font_head">Настройка SSH-ключей в Windows</p>
+<p>&nbsp;</p>
+<p>В операционной системе Windows генератор SSH-ключей включен в комплект поставки Git. Для генерации ключей необходимо запустить на выполнение файл <span class="text_font_inline_code">C:\Program Files\Git\Git bash.vbs</span>. Его можно запустить как обычный exe-шник. Откроется программа "Консоль git". В ней надо дать команду:</p>
+<p>&nbsp;</p>
+<p class="text_font_block_code">ssh-keygen -t rsa -C "myemail@mail.ru"</p>
+<p>&nbsp;</p>
+<p>Будьте внимательны, в этой консоли подглючивает копи-паст, прощще ввести команду вручную. В качестве email указываем свой почтовый ящик. На запрос "<span class="text_font_inline_code">Enter file in which to save the key</span>" просто нажимаем Enter. При запросе пароля "<span class="text_font_inline_code">Enter passphrase</span>" и "<span class="text_font_inline_code">Enter same passphrase again</span>" просто нажимаем Enter. В процессе генерации ключей в консоли будет выдаваться примерно следующая информация:</p>
+<p>&nbsp;</p>
+<p class="text_font_block_code">Generating public/private rsa key pair.<br />Enter file in which to save the key (/c/Documents and Settings/username/.ssh/id_rsa):<br />Enter passphrase (empty for no passphrase):<br />Enter same passphrase again:<br />Your identification has been saved in /c/Documents and Settings/username/.ssh/id_rsa.<br />Your public key has been saved in /c/Documents and Settings/username/.ssh/id_rsa.pub.<br />The key fingerprint is:<br />51:db:73:e9:31:9f:51:a6:7a:c5:3d:da:9c:35:8f:95 myemail@mail.ru</p>
+<p>&nbsp;</p>
+<p>После выполнения этой программы, в каталоге <span class="text_font_inline_code">C:\Documents and Settings\username\.ssh</span> будут лежать файлы&nbsp;<span class="text_font_inline_code">id_rsa</span> и <span class="text_font_inline_code">id_rsa.pub</span>, они нам пригодятся в дальнейшем.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="text_font_big_head">Регистрация на GitHub.com</p>
+<p>&nbsp;</p>
+<p style="text-align: left;">Теперь всё готово для регистрации. Переходим на стартовую страницу <a href="http://GitHub.com">GitHub.com</a>. Интерфейс немного замороченный, поэтому приведу пару скриншотов где что нажимать. Дизайн и верстку могут в любой момент сменить, так что описываю логику действий на данный момент.</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;">В верхнем меню находим пункт "<strong>Pricing and Signup</strong>" и нажимаем на него:</p>
+<p style="text-align: left;">&nbsp;</p>
+<p style="text-align: left;"><img style="display: block; margin-left: auto; margin-right: auto;" src="http://webhamster.ru/db/data/articles/171/github_registry_01.png" alt="" /></p>
+<p>&nbsp;</p>
+<p>Откроется страница выбора тарифного плана. Выбираем бесплатный аккаунт "<strong>Create a free account</strong>":</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="http://webhamster.ru/db/data/articles/171/github_create_free_account_02.png" alt="" /></p>
+<p>&nbsp;</p>
+<p>Далее появится страница регистрации, на которой надо ввести имя пользователя, свой настоящий email и задать пароль. После регистрации сразу попадаем на личную страничку.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="text_font_big_head">Установка SSH-ключа в GitHub</p>
+<p>&nbsp;</p>
+<p>Сразу после регистрации необходимо прописать в системе GutHub свой публичный ключ шифрования (открытый SSH-ключ). Для добавления ключа, надо в правом верхнем углу нажать "<strong>Account Settings</strong>":</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="http://webhamster.ru/db/data/articles/171/github_account_settings_01.png" alt="" /></p>
+<p>&nbsp;</p>
+<p>В открывшемся окне нужно кликнуть на пункт меню "<strong>SSH Public Keys</strong>", и нажать "<strong>Add Another Public Key</strong>". Появится два поля - название ключа (<strong>Title</strong>) и содержимое ключа (<strong>Key</strong>).<br /><br />В поле <strong>Title</strong>&nbsp;можно написать название компьютера, на котором сгенерирован публичный ключ. Можно писать по-русски.</p>
+<p>&nbsp;</p>
+<p>В поле <strong>Key</strong> надо вставить содержимое файла <span class="text_font_inline_code">id_rsa.pub</span>. Помните, в каком каталоге они находятся? Переходим в этот каталог, открываем любым текстовым редактором файл&nbsp;<span class="text_font_inline_code">id_rsa.pub</span> (именно с расширением <span class="text_font_inline_code">.pub</span>, не перепутайте). Выделяем весь текст, копируем, и вставляем на странице GitHub в поле <strong>Key</strong>.</p>
+<p>&nbsp;</p>
+<p>После добавления ключа, компьютер может соединяться с GitHub через программу git, и никаких ошибок не должно возникать.</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="text_font_big_head">Создание репозитария на GitHub</p>
+<p>&nbsp;</p>
+<p>Теперь пришло время создать свой первый репозитарий на GitHub. Репозитарий можно рассматривать просто как директорию, в которой будут лежать синхронизируемые файлы и поддиректории. Создавать репозитарий нужно в web-интерфейсе GitHub, а наполнять его файлами и работать с ним можно будет уже с помощью программы git на своем компьютере.</p>
+<p>&nbsp;</p>
+<p>Для создания репозитария, нужно в правом верхнем углу нажать "<strong>Dashboard</strong>". В открывшемся окне вы увидите пункт "<strong>Create A Repository</strong>":</p>
+<p>&nbsp;</p>
+<p><img style="display: block; margin-left: auto; margin-right: auto;" src="http://webhamster.ru/db/data/articles/171/github_create_repository_01.png" alt="" /></p>
+<p>&nbsp;</p>
+<p>Так вот, этот пункт нам не нужен! Данный пункт открывает не диалог создания репозитария, а страничку помощи. Вместо клика по этому пункту, ищем ниже на странице малоприметную ссылку "<strong>Create A Repository</strong>". Она и откроет диалог добавления нового репозитария.</p>
+<p>&nbsp;</p>
+<p>В диалоге добавления нового репозитарию нужно заполнить, как минимум, поле названия проекта "<strong>Project Name</strong>". В названии проекта лучше не использовать кириллицу, так как имя проекта - это по факту имя директории. Для избежания проблем лучше, чтобы имя проекта содержало только латиницу. После нажатия кнопки "<strong>Create Repository</strong>", репозитарий будет создан.</p>
+<p>&nbsp;</p>
+<p>Рабочая ссылка на репозитарий в системе GitHub формируется так. Если вы зарегистрировались под именем <span class="text_font_inline_code">username</span>, и ваш репозитарий называется <span class="text_font_inline_code">reponame</span>, то для доступа к этому репозитарию можно использовать следующие ссылки:</p>
+<p>&nbsp;</p>
+<p>В синтаксисе Git:</p>
+<p>&nbsp;</p>
+<p class="text_font_block_code">git@github.com:username/reponame.git</p>
+<p><br />В синтаксисе Https:</p>
+<p>&nbsp;</p>
+<p class="text_font_block_code">https://username@github.com/username/reponame.git</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p class="text_font_big_head">Работа с репозитарием на GitHub через программу Git</p>
+<p>&nbsp;</p>
+<p>Начиная с этого момента, пляски вокруг web-интерфейса GitHub можно считать законченными. Далее можно работать только используя программу git.</p>
+<p>&nbsp;</p>
+<p>Вначале нужно сделать небольшую настройку программы git: указать локальной системе git имя пользователя и email. Это делается следующими командами, которые можно выполнить, находясь в любом каталоге:</p>
+<p>&nbsp;</p>
+<p class="text_font_block_code">git config --global user.name "YourFullName"<br /> git config --global user.email myemail@mail.ru</p>
+<p>&nbsp;</p>
+<p>где вместо <span class="text_font_inline_code">YourFullName</span> нужно написать свое имя, а вместо <span class="text_font_inline_code">myemail@mail.ru</span> - свой email. Эти значения используются для логина на GitHub. Поэтому на месте <span class="text_font_inline_code">YourFullName</span> нужно указать ваш логин на GitHub-е, а на месте <span class="text_font_inline_code">myemail@mail.ru</span> нужно указать email, который вы вводили при генерации ключей шифрования.</p>
+<p>&nbsp;</p>
+<p>После этих настроек, можно заливать свои файлы в репозитарий. Переходим в каталог со своим проектом, и даем команды:</p>
+<p>&nbsp;</p>
+<p class="text_font_block_code">git init</p>
+<p class="text_font_block_code">git add .</p>
+<p class="text_font_block_code">git commit -a -m 'first commit'</p>
+<p class="text_font_block_code">git remote add origin git@github.com:username/reponame.git</p>
+<p class="text_font_block_code">git push -u origin master</p>
+<p><br />После этих команд на сервере GitHub образуется копии файлов того каталога, в котором были выполнены данные команды. Далее можно уже делать коммиты, заливки на сервер GitHub изменений, считывания изменений с сервера. Но это уже совсем другая история.</p>
+<p>&nbsp;</p>     </div>
+    </div>
+   </font> 
+  </td>
+ </tr> 
+</table><br/><p><a href="http://webhamster.ru/site/page/index/articles/comp">К списку &quot;Компьютерное&quot;</a></p>
+</div>
+
+<!-- Соседние статьи -->
+<div>
+ <br>
+ <b>Еще в этом разделе:</b><br>
+ 
+ 
+ <table border="0" width="100%"> 
+  <tr>
+   <td width="50%" align="left">
+    <div><table border="0"><tr>  <td valign="middle"><a href="http://webhamster.ru/site/page/index/articles/comp/139" style="text-decoration: none;"><font size="+3"><b>&lt;</b></font></a></td>  <td valign="middle"><div><a href="http://webhamster.ru/site/page/index/articles/comp/139"><b>Отладчик GDB</b>: Отладка в gdb: как отловить обращение к переменной или к нужному свойству класса</a></div></td>  </tr></table></div>
+   </td>    
+   <td>&nbsp;&nbsp;&nbsp;</td>
+   <td width="50%" align="right">
+    <div align="left"><table border="0"><tr>  <td valign="middle"><div><a href="http://webhamster.ru/site/page/index/articles/comp/216"><b>Система контроля версий GIT</b>: Как перенести локальный GIT-репозитарий на сервер вместе со всей историей</a></div></td>  <td valign="middle"><a href="http://webhamster.ru/site/page/index/articles/comp/216" style="text-decoration: none;"><font size="+3"><b>&gt;</b></font></a></td> </tr></table></div>
+   </td>
+  </tr>
+ </table>
+
+</div>
+
+  
+     </div>
+     
+     <div style="margin-top: 20px; margin-bottom: 20px;">
+        
+     </div>
+     
+    </div>
+
+   </div>
+
+   <div style="margin-left: 20px; margin-right: 20px; margin-top: 20px; margin-bottom: 20px;">
+
+   
+   </div>
+
+  </td>  
+
+  <!-- Правая колонка -->
+  <td width="200" bgcolor="#8FA3D3" valign="top">
+
+   <div style="margin-left: 12px; margin-right: 12px; margin-top: 20px; margin-bottom: 20px;">
+
+    <font class="text_font_head"><p>Интересное на сайте</p></font>
+
+    <noindex>
+    <font class="text_font_basis">
+     <br/>
+<div >
+ <font class="text_font_head_light">
+  Гаджеты &raquo; 
+ </font>
+ <font class="text_font_head" >
+  Новогодняя битва роботов в Волгодонске (2013-2014) </font>
+</div>
+
+<div><br/>В канун наступления нового, 2014 года, в моем городе Волгодонске одно из подразделений Станции Юных Техников провело соревнования по робо-сумо.
+&nbsp;...</div>
+
+
+<div class="text_font_mini" style="text-align: right;">
+ <br/>
+ <b><a href="http://webhamster.ru/site/page/index/articles/misc/300">Подробнее &raquo;</a></b>
+</div>
+<br/><br/>
+<div >
+ <font class="text_font_head_light">
+  Web - разработка &raquo; 
+ </font>
+ <font class="text_font_head" >
+  Kohana 3.x : Валидация данных </font>
+</div>
+
+<div><br/>Введение
+&nbsp;
+Валидация в Kohana 3.x осуществляется с помощью класса-валидатора, который обрабатывает ассоциативные массивы ключ=&gt;значение. Напри...</div>
+
+
+<div class="text_font_mini" style="text-align: right;">
+ <br/>
+ <b><a href="http://webhamster.ru/site/page/index/articles/comp/189">Подробнее &raquo;</a></b>
+</div>
+<br/><br/>
+<div >
+ <font class="text_font_head_light">
+  Flash-анимация &raquo; 
+ </font>
+ <font class="text_font_head" >
+  Клип клуба "Сакура" </font>
+</div>
+
+<div><br/>
+Оборудование: Pentium-200MMX, RAM 32Мб
+Среда: Flash MX
+Год: 2002
+&nbsp;
+Этот клип я создавал, преследуя две цели.
+&nbsp;
+Первая цель - разобраться с ...</div>
+
+<div style="padding:8px;"><img  src="/db/data/articles/63/clip02_160.jpg" alt="" width="160" height="115" /></div>
+<div class="text_font_mini" style="text-align: right;">
+ <br/>
+ <b><a href="http://webhamster.ru/site/page/index/animation/63">Подробнее &raquo;</a></b>
+</div>
+<br/>  
+    </font>
+    </noindex>
+
+   </div>
+
+   <div style="margin-left: 12px; margin-right: 12px; margin-top: 20px; margin-bottom: 20px;">
+
+    <font class="text_font_head"><p>RSS подписка</p></font>
+
+    <table border="0" cellpadding="0" cellspacing="0"><tr>
+     <td valign="top">
+      <a href="http://webhamster.ru/site/rss"><img src="/db/data/design/rss_feed.png" border="0"/></a>
+     </td>
+     <td valign="top">
+      <div class="text_font_basis" style="padding-left: 12px;">
+        Подпишитесь на новости сайта по RSS
+      </div>
+     </td> 
+    </tr></table> 
+
+   </div>
+
+   <div style="margin-left: 12px; margin-right: 12px; margin-top: 20px; margin-bottom: 20px;">
+    <br/>
+    <center>
+     <!--LiveInternet logo--><noindex><a href="http://www.liveinternet.ru/click"
+target="_blank" rel="nofollow"><img src="//counter.yadro.ru/logo?27.2"
+title="LiveInternet: показано количество просмотров и посетителей"
+alt="" border="0" width="88" height="120"/></a></noindex><!--/LiveInternet-->
+    </center>
+   </div>
+
+   <div style="margin-left: 12px; margin-right: 12px; margin-top: 20px; margin-bottom: 20px;">
+    <br/>
+     <font class="text_font_basis">
+      <!-- Объявления -->
+<div class="saapee_block"><script type="text/javascript">
+<!--
+var _acic={dataProvider:10};(function(){var e=document.createElement("script");e.type="text/javascript";e.async=true;e.src="//www.acint.net/aci.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})()
+//-->
+</script><div class="text_font_mini"><font color="#373737">О, смотри-ка какое хорошее место. Дайте два!</font></div></div>     </font>
+   </div>
+
+   <div style="margin-left: 12px; margin-right: 12px; margin-top: 20px; margin-bottom: 20px;">
+    <br/>
+     <font class="text_font_basis">
+      <div class="tinymce">
+  <p><strong>Внимание!</strong></p>
+<p>На этом сайте разрабатывается программа <strong><a href="/site/page/index/articles/projectcode/105">MyTetra</a></strong> и её родственные проекты.</p>
+<p>Доступны к просмотру следующие базы знаний:</p>
+<p><a href="/mytetrashare/index/mtb0">База Xintrea</a> (<a href="/mytetrashare/index/mtb0-0">1</a>, <a href="/mytetrashare/index/mtb0-1">2</a>, <a href="/mytetrashare/index/mtb0-2">3</a>, <a href="/mytetrashare/index/mtb0-3">4</a>, <a href="/mytetrashare/index/mtb0-4">5</a>, <a href="/mytetrashare/index/mtb0-5">6</a>, <a href="/mytetrashare/index/mtb0-6">7</a>, <a href="/mytetrashare/index/mtb0-7">8</a>, <a href="/mytetrashare/index/mtb0-8">9</a>, <a href="/mytetrashare/index/mtb0-9">10</a>, <a href="/mytetrashare/index/mtb0-10">11</a>, <a href="/mytetrashare/index/mtb0-11">12</a>, <a href="/mytetrashare/index/mtb0-12">13</a>, <a href="/mytetrashare/index/mtb0-13">14</a>, <a href="/mytetrashare/index/mtb0-14">15</a>, <a href="/mytetrashare/index/mtb0-15">16</a>, <a href="/mytetrashare/index/mtb0-16">17</a>, <a href="/mytetrashare/index/mtb0-17">18</a>)</p>
+<p><a href="/mytetrashare/index/mtb1">База Rarrugas</a> (<a href="/mytetrashare/index/mtb1-0">1</a>, <a href="/mytetrashare/index/mtb1-1">2</a>)</p>
+<p><a href="/mytetrashare/index/mtb2">База Balas</a></p>
+<p><a href="/mytetrashare/index/mtb3">База YellowRaven</a></p>
+<p><a href="/mytetrashare/index/mtb4">База Yurons</a></p>
+<p><a href="/mytetrashare/index/mtb108">База Lesnik757</a></p>
+<p><a href="/mytetrashare/index/mtb106">База Shandor</a></p>
+<p><a href="/mytetrashare/index/mtb104">База Sirrichar</a></p>
+<p>&nbsp;</p>
+<p>Подробности на странице <strong><a href="/site/page/index/articles/projectcode/267">MyTetra&nbsp;Share</a></strong>.</p></div>
+     </font>
+   </div>
+
+
+  </td>  
+ </tr>
+
+ <!-- Низ страницы --> 
+ <tr style="margin-left: 0px;">   
+  <td colspan="3" bgcolor="#4F3F3F" style="margin-left: 0px;"><!-- E8E33D -->
+
+   <table border="0" width="100%" style="margin-left: 0px;">
+    <tr style="margin-left: 0px;">
+     <td align="left" width="30%" style="margin-left: 0px;">
+      <div class="bottom_font">
+       <nobr>&nbsp;<a href="http://webhamster.ru/" class="bottom_font">WebHamster.Ru</a></nobr><br/>
+       <nobr>&nbsp;Домик любопытного хомячка</nobr>
+      </div> 
+     </td> 
+     <td align="center" width="30%">
+
+     <table border="0" width="1%">
+      <tr>
+       <td>
+        <!-- begin of Top100 code -->
+<noindex>
+<script id="top100Counter" type="text/javascript" src="http://counter.rambler.ru/top100.jcn?2286108"></script>
+<noscript>
+<a href="http://top100.rambler.ru/navi/2286108/">
+<img src="http://counter.rambler.ru/top100.cnt?2286108" alt="Rambler's Top100" border="0" />
+</a>
+</noscript>
+</noindex>
+<!-- end of Top100 code -->
+       </td>
+       <td>
+        <!-- ТИЦ --><noindex><a href="http://yandex.ru/cy?base=0&amp;host=webhamster.ru" rel="nofollow"><img src="http://www.yandex.ru/cycounter?webhamster.ru" width="88" height="31" alt="Яндекс индекс цитирования" border="0" /></a></noindex><!-- /ТИЦ -->
+       </td>
+      </tr>
+     </table> 
+
+     </td>
+     <td align="right" width="30%">
+      <div class="bottom_font">
+       <nobr>Почтовый ящик&nbsp;</nobr><br/>
+       <nobr><script type="text/javascript">
+	//<![CDATA[
+	var l=new Array();
+	l[0]='>';l[1]='a';l[2]='/';l[3]='<';l[4]='|109';l[5]='|111';l[6]='|99';l[7]='|46';l[8]='|108';l[9]='|105';l[10]='|97';l[11]='|109';l[12]='|103';l[13]='|64';l[14]='|97';l[15]='|101';l[16]='|114';l[17]='|116';l[18]='|110';l[19]='|105';l[20]='|88';l[21]='>';l[22]='"';l[23]='t';l[24]='n';l[25]='o';l[26]='f';l[27]='_';l[28]='m';l[29]='o';l[30]='t';l[31]='t';l[32]='o';l[33]='b';l[34]='"';l[35]='=';l[36]='s';l[37]='s';l[38]='a';l[39]='l';l[40]='c';l[41]='"';l[42]='|109';l[43]='|111';l[44]='|99';l[45]='|46';l[46]='|108';l[47]='|105';l[48]='|97';l[49]='|109';l[50]='|103';l[51]='|64';l[52]='|97';l[53]='|101';l[54]='|114';l[55]='|116';l[56]='|110';l[57]='|105';l[58]='|120';l[59]=':';l[60]='o';l[61]='t';l[62]='l';l[63]='i';l[64]='a';l[65]='m';l[66]='"';l[67]='=';l[68]='f';l[69]='e';l[70]='r';l[71]='h';l[72]=' ';l[73]='a';l[74]='<';
+	for (var i = l.length-1; i >= 0; i=i-1){
+	if (l[i].substring(0, 1) == '|') document.write("&#"+unescape(l[i].substring(1))+";");
+	else document.write(unescape(l[i]));}
+	//]]>
+	</script>&nbsp;</nobr>
+      </div> 
+     </td>  
+    </tr>
+   </table>
+
+  </td>
+ </tr>
+ 
+</table> 
+
+</div>
+</div>
+
+<!--LiveInternet counter--><script type="text/javascript"><!--
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random();//--></script><!--/LiveInternet-->
+</body>
+</html>
